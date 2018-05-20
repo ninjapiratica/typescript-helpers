@@ -1,12 +1,12 @@
 {
   "name": "ninjapiratica-typescript-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript Helpers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/ninjapiratica/typescript-helpers#readme",
   "devDependencies": {
-    "typescript": "^2.8.3"
+    "chai": "4.1.2",
+    "mocha": "5.2.0",
+    "typescript": "2.8.3"
   }
 }

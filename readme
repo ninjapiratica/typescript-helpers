@@ -1,9 +1,11 @@
-# typescript-helpers
+# ninjapiratica-typescript-helpers
 A module with simple helpers you probably don't need.
+A server may return results with PascalCasing and you want to use camelCasing. This will convert the objects for you to use.
+A server may expect PascalCasing and you use camelCasing. This will convert the objects for you as well.
 
 ## Installation
 ```sh
-npm install typescript-helpers --save
+npm install ninjapiratica-typescript-helpers --save
 ```
 
 ## Usage
@@ -18,10 +20,10 @@ var obj = {
     ...
 };
 
-obj = convertToCamelCase(obj);
+var newObj = convertToCamelCase(obj);
 ```
 ```sh
-obj should be
+newObj should be
 {
     key: 'value',
     ...

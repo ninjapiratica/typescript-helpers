@@ -14,26 +14,23 @@ function convertToPascalCase(obj) {
 exports.convertToPascalCase = convertToPascalCase;
 function convertCase(obj, convertKey) {
     if (obj === null || obj === undefined) {
-        return obj;
+        return null;
     }
     if (Array.isArray(obj)) {
-        obj.forEach(function (val) { return convertCase(val, convertKey); });
+        return obj.map(function (val) { return convertCase(val, convertKey); });
     }
     else if (obj instanceof Date) {
         return obj;
     }
     else if (typeof obj === 'object') {
         var keys = Object.keys(obj);
+        var newObj_1 = {};
         keys.forEach(function (key) {
-            var anyObj = obj;
-            var prop = anyObj[key];
+            var prop = obj[key];
             var newKey = convertKey(key);
-            if (newKey !== key) {
-                delete anyObj[key];
-            }
-            key = convertKey(key);
-            anyObj[key] = convertCase(prop, convertKey);
+            newObj_1[newKey] = convertCase(prop, convertKey);
         });
+        return newObj_1;
     }
     return obj;
 }
