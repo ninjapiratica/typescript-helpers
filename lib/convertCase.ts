@@ -11,7 +11,7 @@ export function convertToPascalCase<T>(obj: T) : T {
 }
 
 function convertCase<T>(obj: T, convertKey: (key: string) => string) : T {
-    if (obj === null || obj === undefined){
+    if (obj === null || obj === undefined) {
         return obj;
     }
     
@@ -23,14 +23,15 @@ function convertCase<T>(obj: T, convertKey: (key: string) => string) : T {
         let keys = Object.keys(obj);
 
         keys.forEach(key => {
-            let prop = obj[key];
+            let anyObj = <any>obj;
+            let prop = anyObj[key];
             let newKey = convertKey(key);
 
             if (newKey !== key) {
-                delete obj[key];
+                delete anyObj[key];
             }
             key = convertKey(key);
-            obj[key] = convertCase(prop, convertKey);
+            anyObj[key] = convertCase(prop, convertKey);
         });
     }
 

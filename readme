@@ -1,0 +1,29 @@
+# typescript-helpers
+A module with simple helpers you probably don't need.
+
+## Installation
+```sh
+npm install typescript-helpers --save
+```
+
+## Usage
+
+### Typescript
+
+```typescript
+import { convertCamelCase, convertPascalCase } from 'typescript-helpers';
+
+var obj = {
+    Key: 'value',
+    ...
+};
+
+obj = convertToCamelCase(obj);
+```
+```sh
+obj should be
+{
+    key: 'value',
+    ...
+}
+```
