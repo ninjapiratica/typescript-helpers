@@ -26,7 +26,7 @@
     "url": "https://github.com/ninjapiratica/typescript-helpers/issues"
   },
   "homepage": "https://github.com/ninjapiratica/typescript-helpers#readme",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^2.8.3"
   }
 }
