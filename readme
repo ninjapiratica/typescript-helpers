@@ -13,7 +13,7 @@ npm install ninjapiratica-typescript-helpers --save
 ### Typescript
 
 ```typescript
-import { convertCamelCase, convertPascalCase } from 'typescript-helpers';
+import { convertCamelCase, convertPascalCase } from 'ninjapiratica-typescript-helpers';
 
 var obj = {
     Key: 'value',
